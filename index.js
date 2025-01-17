@@ -75,6 +75,8 @@ function search(started) {
                     <div><strong>레벨:</strong> ${card.level}</div>
                     <div><strong>파워:</strong> ${card.power}</div>
                     <div><strong>소울:</strong> ${card.soul}</div>
+                    ${!card.trigger ? "" : `<div><strong>트리거:</strong> ${card.trigger}</div>`}
+                    <div><strong>도라:</strong> ${card.soultrigger}</div>
                     <div><strong>코스트:</strong> ${card.cost}</div>
                     <div><strong>색:</strong> ${card.color}</div>
                     <div><strong>특징:</strong> ${card.features}</div>
