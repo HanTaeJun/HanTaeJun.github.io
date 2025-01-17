@@ -60,7 +60,6 @@ h1 {
     }
 }
 
-
 button {
     padding: 12px 20px;
     background-color: #4CAF50;
@@ -116,15 +115,17 @@ button:hover {
     color: #333;
 }
 
+/* 페이지네이션 */
 .pagination {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    gap: 5px;
+    flex-wrap: wrap; /* 줄 바꿈을 허용 */
 }
 
 .pagination button {
     padding: 8px 16px;
-    margin: 0 5px;
     background-color: #ddd;
     border: none;
     border-radius: 5px;
@@ -140,6 +141,33 @@ button:hover {
     cursor: not-allowed;
 }
 
+/* 모바일 환경에서 페이지네이션 */
+@media (max-width: 600px) {
+    .pagination {
+        overflow-x: auto; /* 가로 스크롤 가능 */
+        flex-wrap: nowrap; /* 한 줄로 유지 */
+        padding: 10px 0;
+    }
+
+    .pagination button {
+        flex-shrink: 0; /* 버튼 크기 고정 */
+    }
+
+    .pagination::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .pagination::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 3px;
+    }
+
+    .pagination::-webkit-scrollbar-track {
+        background: #f8f9fa;
+    }
+}
+
+/* 스크롤 탑 버튼 */
 #scrollTopButton {
     position: fixed;
     bottom: 60px;
