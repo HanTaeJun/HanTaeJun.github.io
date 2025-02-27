@@ -16,11 +16,11 @@ let searchResults = []; // 검색된 결과
 // 스크롤 위치에 따라 "맨 위로" 버튼의 보이기/숨기기
 window.onscroll = function() {
     const scrollTopButton = document.getElementById('scrollTopButton');
-    
+    +1
     // 현재 스크롤 위치가 100px 이상일 때 "맨 위로" 버튼을 보이도록 설정
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         scrollTopButton.style.display = "block";
-    } else {
+    } else { 
         scrollTopButton.style.display = "none";
     }
 };
@@ -167,10 +167,10 @@ function createPagination(totalPages) {
     if (startPage > 1) {
         const firstPageButton = document.createElement('button');
         firstPageButton.textContent = '1';
-        firstPageButton.onclick = () => changePage(1);
+        firstPageButton.onclick = () => changePage(1); 
         paginationContainer.appendChild(firstPageButton);
 
-        // '...' 버튼 추가
+        // '...' 버튼 추가`'
         const dotsButton = document.createElement('button');
         dotsButton.textContent = '...';
         dotsButton.onclick = () => {
@@ -182,8 +182,8 @@ function createPagination(totalPages) {
             } else {
                 // alert('존재하지 않는 페이지 번호입니다');
             }
-        };
-        paginationContainer.appendChild(dotsButton);
+        };j
+        paginationContainer.appendChild(dotsButton); 
     }
 
     // 중간 페이지 번호 버튼
