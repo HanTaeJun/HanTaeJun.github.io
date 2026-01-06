@@ -17,11 +17,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* input과 버튼 사이의 간격 */
+    gap: 10px;
+    /* input과 버튼 사이의 간격 */
 }
 
 .search-container input {
-    flex: 1; /* 버튼과 균형을 맞추기 위해 크기를 유동적으로 조정 */
+    flex: 1;
+    /* 버튼과 균형을 맞추기 위해 크기를 유동적으로 조정 */
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -47,16 +49,20 @@ h1 {
 /* 모바일 환경 (너비 600px 이하) */
 @media (max-width: 600px) {
     .search-container {
-        flex-direction: column; /* 세로 정렬로 변경 */
-        gap: 5px; /* 간격 축소 */
+        flex-direction: column;
+        /* 세로 정렬로 변경 */
+        gap: 5px;
+        /* 간격 축소 */
     }
 
     .search-container input {
-        width: 100%; /* 화면 너비에 맞게 확장 */
+        width: 100%;
+        /* 화면 너비에 맞게 확장 */
     }
 
     .search-container button {
-        width: 100%; /* 버튼도 화면 너비에 맞게 확장 */
+        width: 100%;
+        /* 버튼도 화면 너비에 맞게 확장 */
     }
 }
 
@@ -68,7 +74,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-left: 10px; /* 버튼과 input 사이 간격 */
+    margin-left: 10px;
+    /* 버튼과 input 사이 간격 */
 }
 
 button:hover {
@@ -121,7 +128,8 @@ button:hover {
     justify-content: center;
     margin-top: 20px;
     gap: 5px;
-    flex-wrap: wrap; /* 줄 바꿈을 허용 */
+    flex-wrap: wrap;
+    /* 줄 바꿈을 허용 */
 }
 
 .pagination button {
@@ -144,13 +152,16 @@ button:hover {
 /* 모바일 환경에서 페이지네이션 */
 @media (max-width: 600px) {
     .pagination {
-        overflow-x: auto; /* 가로 스크롤 가능 */
-        flex-wrap: nowrap; /* 한 줄로 유지 */
+        overflow-x: auto;
+        /* 가로 스크롤 가능 */
+        flex-wrap: nowrap;
+        /* 한 줄로 유지 */
         padding: 10px 0;
     }
 
     .pagination button {
-        flex-shrink: 0; /* 버튼 크기 고정 */
+        flex-shrink: 0;
+        /* 버튼 크기 고정 */
     }
 
     .pagination::-webkit-scrollbar {
@@ -171,26 +182,44 @@ button:hover {
 #scrollTopButton {
     position: fixed;
     bottom: 60px;
-    right: 5%; 
-    transform: translateX(-50%); 
-    background-color: #007bff; 
-    color: white; 
-    border: none; 
+    right: 5%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    border: none;
     border-radius: 5px;
     padding: 10px 15px;
     font-size: 18px;
     cursor: pointer;
     display: none;
     z-index: 1000;
-    transition: opacity 0.3s ease; 
+    transition: opacity 0.3s ease;
     text-align: center;
 }
 
 #scrollTopButton:before {
-    content: '↑'; /* 화살표 모양 */
-    font-size: 24px; /* 화살표 크기 */
+    content: '↑';
+    /* 화살표 모양 */
+    font-size: 24px;
+    /* 화살표 크기 */
 }
 
 #scrollTopButton:hover {
-    background-color: #0056b3; /* 마우스를 올렸을 때 배경 색 */
+    background-color: #0056b3;
+    /* 마우스를 올렸을 때 배경 색 */
+}
+
+.card-imgs-container {
+    perspective: 600px;
+    display: inline-block;
+}
+
+.card-imgs {
+    transition: transform 0.1s ease;
+    transform-style: preserve-3d;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
 }
